@@ -4,15 +4,15 @@
 
 moretrees.enable_apple_tree		= true
 moretrees.enable_oak			= true
-moretrees.enable_sequoia		= true
-moretrees.enable_palm			= true
+moretrees.enable_sequoia		= false
+moretrees.enable_palm			= false
 moretrees.enable_date_palm		= true
 moretrees.enable_cedar			= true
 moretrees.enable_rubber_tree	= true
-moretrees.enable_willow			= true
+moretrees.enable_willow			= false
 moretrees.enable_birch			= true
 moretrees.enable_spruce			= true
-moretrees.enable_jungle_tree	= true
+moretrees.enable_jungle_tree	= false
 moretrees.enable_fir			= true
 moretrees.enable_poplar			= true
 moretrees.enable_beech			= false

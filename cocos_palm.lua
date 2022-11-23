@@ -7,7 +7,7 @@ local S = minetest.get_translator("moretrees")
 local coconut_drop_ichance = 8
 
 -- Make the cocos palm fruit trunk a real trunk (it is generated as a fruit)
-local trunk = minetest.registered_nodes["moretrees:palm_trunk"]
+local trunk = minetest.registered_nodes["ethereal:palm_trunk"]
 local ftrunk = {}
 local gftrunk = {}
 for k,v in pairs(trunk) do
@@ -20,8 +20,8 @@ for k,v in pairs(trunk.tiles) do
 	ftrunk.tiles[k] = v
 	gftrunk.tiles[k] = v
 end
-ftrunk.drop = "moretrees:palm_trunk"
-gftrunk.drop = "moretrees:palm_trunk"
+ftrunk.drop = "ethereal:palm_trunk"
+gftrunk.drop = "ethereal:palm_trunk"
 ftrunk.after_destruct = function(pos, oldnode)
 	local coconuts = minetest.find_nodes_in_area(
 		{x=pos.x-1, y=pos.y, z=pos.z-1},
