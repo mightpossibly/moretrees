@@ -126,6 +126,7 @@ moretrees.spawn_fir_snow_object = "moretrees.grow_fir_snow"
 moretrees.spawn_poplar_object = moretrees.poplar_model
 moretrees.spawn_poplar_small_object = moretrees.poplar_small_model
 
+<<<<<<< Updated upstream
 local deco_ids = {}
 
 function translate_biome_defs(def, treename, index)
@@ -153,6 +154,36 @@ if moretrees.enable_beech then
 	minetest.register_decoration(translate_biome_defs(moretrees.beech_biome, "beech"))
 end
 
+=======
+if moretrees.spawn_saplings then
+	moretrees.spawn_apple_tree_object = "moretrees:apple_tree_sapling_ongen"
+	moretrees.spawn_oak_object = "moretrees:oak_sapling_ongen"
+	moretrees.spawn_palm_object = "moretrees:palm_sapling_ongen"
+	moretrees.spawn_date_palm_object = "moretrees:date_palm_sapling_ongen"
+	moretrees.spawn_cedar_object = "moretrees:cedar_sapling_ongen"
+	moretrees.spawn_rubber_tree_object = "moretrees:rubber_tree_sapling_ongen"
+	moretrees.spawn_spruce_object = "moretrees:spruce_sapling_ongen"
+	moretrees.spawn_jungletree_object = "moretrees:jungletree_sapling_ongen"
+	moretrees.spawn_fir_object = "moretrees:fir_sapling_ongen"
+	moretrees.spawn_fir_snow_object = "snow:sapling_pine"
+	moretrees.spawn_poplar_object = "moretrees:poplar_sapling_ongen"
+	moretrees.spawn_poplar_small_object = "moretrees:poplar_small_sapling_ongen"
+else
+	moretrees.spawn_apple_tree_object = moretrees.apple_tree_model
+	moretrees.spawn_oak_object = moretrees.oak_model
+	moretrees.spawn_palm_object = moretrees.palm_model
+	moretrees.spawn_date_palm_object = moretrees.date_palm_model
+	moretrees.spawn_cedar_object = moretrees.cedar_model
+	moretrees.spawn_rubber_tree_object = moretrees.rubber_tree_model
+	moretrees.spawn_spruce_object = "moretrees.grow_spruce"
+	moretrees.spawn_jungletree_object = "moretrees.grow_jungletree"
+	moretrees.spawn_fir_object = "moretrees.grow_fir"
+	moretrees.spawn_fir_snow_object = "moretrees.grow_fir_snow"
+	moretrees.spawn_poplar_object = moretrees.poplar_model
+	moretrees.spawn_poplar_small_object = moretrees.poplar_small_model
+end
+
+>>>>>>> Stashed changes
 if moretrees.enable_apple_tree then
 	minetest.register_decoration(translate_biome_defs(moretrees.apple_tree_biome, "apple_tree"))
 end
@@ -161,10 +192,13 @@ if moretrees.enable_oak then
 	minetest.register_decoration(translate_biome_defs(moretrees.oak_biome, "oak"))
 end
 
+<<<<<<< Updated upstream
 if moretrees.enable_sequoia then
 	minetest.register_decoration(translate_biome_defs(moretrees.sequoia_biome, "sequoia"))
 end
 
+=======
+>>>>>>> Stashed changes
 if moretrees.enable_palm then
 	minetest.register_decoration(translate_biome_defs(moretrees.palm_biome, "palm"))
 end
@@ -182,6 +216,7 @@ if moretrees.enable_rubber_tree then
 	minetest.register_decoration(translate_biome_defs(moretrees.rubber_tree_biome, "ruber"))
 end
 
+<<<<<<< Updated upstream
 if moretrees.enable_willow then
 	minetest.register_decoration(translate_biome_defs(moretrees.willow_biome, "willow"))
 end
@@ -190,6 +225,8 @@ if moretrees.enable_birch then
 	minetest.register_decoration(translate_biome_defs(moretrees.birch_biome, "birch"))
 end
 
+=======
+>>>>>>> Stashed changes
 if moretrees.enable_spruce then
 	minetest.register_decoration(translate_biome_defs(moretrees.spruce_biome, "spruce"))
 end
@@ -213,6 +250,7 @@ if moretrees.enable_poplar then
 	minetest.register_decoration(translate_biome_defs(moretrees.poplar_small_biome_2, "popular", 5))
 end
 
+<<<<<<< Updated upstream
 for k, v in pairs(deco_ids) do
 	deco_ids[k] = minetest.get_decoration_id(v)
 end
@@ -249,6 +287,8 @@ function moretrees.grow_birch(pos)
 	end
 end
 
+=======
+>>>>>>> Stashed changes
 -- Code to spawn a spruce tree
 
 function moretrees.grow_spruce(pos)
@@ -379,5 +419,62 @@ function moretrees.grow_fir_snow(pos)
 	end
 	minetest.spawn_tree(pos,moretrees.fir_model)
 end
+
+minetest.register_alias("moretrees:beech_trunk", "default:tree")
+minetest.register_alias("moretrees:beech_planks", "default:wood")
+minetest.register_alias("moretrees:beech_sapling", "default:sapling")
+minetest.register_alias("moretrees:beech_sapling_ongen", "default:sapling")
+minetest.register_alias("moretrees:beech_leaves", "default:leaves")
+minetest.register_alias("moretrees:stair_beech_planks", "default:leaves")
+minetest.register_alias("moretrees:slab_beech_planks", "default:leaves")
+minetest.register_alias("moretrees:stair_beech_trunk", "default:leaves")
+minetest.register_alias("moretrees:slab_beech_trunk", "default:leaves")
+minetest.register_alias("moretrees:beech_gate_closed", "doors:gate_wood_closed")
+minetest.register_alias("moretrees:beech_gate_open", "doors:gate_wood_open")
+minetest.register_alias("moretrees:beech_fence_rail", "default:fence_rail_wood")
+minetest.register_alias("moretrees:beech_fence", "default:fence_wood")
+
+minetest.register_alias("moretrees:sequoia_trunk", "default:tree")
+minetest.register_alias("moretrees:sequoia_planks", "default:wood")
+minetest.register_alias("moretrees:sequoia_sapling", "default:sapling")
+minetest.register_alias("moretrees:sequoia_sapling_ongen", "default:sapling")
+minetest.register_alias("moretrees:sequoia_leaves", "default:leaves")
+minetest.register_alias("moretrees:sequoia_beech_planks", "default:leaves")
+minetest.register_alias("moretrees:slab_sequoia_planks", "default:leaves")
+minetest.register_alias("moretrees:stair_sequoia_trunk", "default:leaves")
+minetest.register_alias("moretrees:slab_sequoia_trunk", "default:leaves")
+minetest.register_alias("moretrees:sequoia_gate_closed", "doors:gate_wood_closed")
+minetest.register_alias("moretrees:sequoia_gate_open", "doors:gate_wood_open")
+minetest.register_alias("moretrees:sequoia_fence_rail", "default:fence_rail_wood")
+minetest.register_alias("moretrees:sequoia_fence", "default:fence_wood")
+
+minetest.register_alias("moretrees:willow_trunk", "default:tree")
+minetest.register_alias("moretrees:willow_planks", "default:wood")
+minetest.register_alias("moretrees:willow_sapling", "default:sapling")
+minetest.register_alias("moretrees:willow_sapling_ongen", "default:sapling")
+minetest.register_alias("moretrees:willow_leaves", "default:leaves")
+minetest.register_alias("moretrees:willow_beech_planks", "default:leaves")
+minetest.register_alias("moretrees:slab_willow_planks", "default:leaves")
+minetest.register_alias("moretrees:stair_willow_trunk", "default:leaves")
+minetest.register_alias("moretrees:slab_willow_trunk", "default:leaves")
+minetest.register_alias("moretrees:willow_gate_closed", "doors:gate_wood_closed")
+minetest.register_alias("moretrees:willow_gate_open", "doors:gate_wood_open")
+minetest.register_alias("moretrees:willow_fence_rail", "default:fence_rail_wood")
+minetest.register_alias("moretrees:willow_fence", "default:fence_wood")
+
+minetest.register_alias("moretrees:birch_trunk", "default:tree")
+minetest.register_alias("moretrees:birch_planks", "default:wood")
+minetest.register_alias("moretrees:birch_sapling", "default:sapling")
+minetest.register_alias("moretrees:birch_sapling_ongen", "default:sapling")
+minetest.register_alias("moretrees:birch_leaves", "default:leaves")
+minetest.register_alias("moretrees:birch_beech_planks", "default:leaves")
+minetest.register_alias("moretrees:slab_birch_planks", "default:leaves")
+minetest.register_alias("moretrees:stair_birch_trunk", "default:leaves")
+minetest.register_alias("moretrees:slab_birch_trunk", "default:leaves")
+minetest.register_alias("moretrees:birch_gate_closed", "doors:gate_wood_closed")
+minetest.register_alias("moretrees:birch_gate_open", "doors:gate_wood_open")
+minetest.register_alias("moretrees:birch_fence_rail", "default:fence_rail_wood")
+minetest.register_alias("moretrees:birch_fence", "default:fence_wood")
+
 
 print("[Moretrees] Loaded (2013-02-11)")

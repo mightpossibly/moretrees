@@ -3,37 +3,25 @@ local S = minetest.get_translator("moretrees")
 moretrees.avoidnodes = {}
 
 moretrees.treelist = {
-	{"beech",        S("Beech Tree")},
 	{"apple_tree",   S("Apple Tree")},
 	{"oak",          S("Oak Tree"),       "acorn",                S("Acorn"), {-0.2, -0.5, -0.2, 0.2, 0, 0.2}, 0.8 },
+<<<<<<< Updated upstream
 	{"sequoia",      S("Giant Sequoia")},
 	{"birch",        S("Birch Tree")},
+=======
+>>>>>>> Stashed changes
 	{"palm",         S("Palm Tree"),      "palm_fruit_trunk_gen", S("Palm Tree"), {-0.2, -0.5, -0.2, 0.2, 0, 0.2}, 1.0 },
 	{"date_palm",    S("Date Palm Tree"), "date_palm_fruit_trunk",S("Date Palm Tree"), {0, 0, 0, 0, 0, 0}, 0.0 },
 	{"spruce",       S("Spruce Tree"),    "spruce_cone",          S("Spruce Cone"), {-0.2, -0.5, -0.2, 0.2, 0, 0.2}, 0.8 },
 	{"cedar",        S("Cedar Tree"),     "cedar_cone",           S("Cedar Cone"), {-0.2, -0.5, -0.2, 0.2, 0, 0.2}, 0.8 },
 	{"poplar",       S("Poplar Tree")},
 	{"poplar_small", S("Poplar Tree")},
-	{"willow",       S("Willow Tree")},
 	{"rubber_tree",  S("Rubber Tree")},
 	{"fir",          S("Douglas Fir"),    "fir_cone",             S("Fir Cone"), {-0.2, -0.5, -0.2, 0.2, 0, 0.2}, 0.8 },
 	{"jungletree",   S("Jungle Tree"),     nil,                   nil, nil, nil, "default_junglesapling.png"  },
 }
 
 moretrees.treedesc = {
-	beech = {
-		trunk = S("Beech Tree Trunk"),
-		planks = S("Beech Tree Planks"),
-		sapling = S("Beech Tree Sapling"),
-		leaves = S("Beech Tree Leaves"),
-		trunk_stair = S("Beech Tree Trunk Stair"),
-		trunk_slab = S("Beech Tree Trunk Slab"),
-		planks_stair = S("Beech Tree Planks Stair"),
-		planks_slab = S("Beech Tree Planks Slab"),
-		fence = S("Beech Tree Fence"),
-		fence_rail = S("Beech Tree Fence Rail"),
-		fence_gate = S("Beech Tree Fence Gate"),
-	},
 	apple_tree = {
 		trunk = S("Apple Tree Trunk"),
 		planks = S("Apple Tree Planks"),
@@ -59,32 +47,6 @@ moretrees.treedesc = {
 		fence = S("Oak Tree Fence"),
 		fence_rail = S("Oak Tree Fence Rail"),
 		fence_gate = S("Oak Tree Fence Gate"),
-	},
-	sequoia = {
-		trunk = S("Giant Sequoia Trunk"),
-		planks = S("Giant Sequoia Planks"),
-		sapling = S("Giant Sequoia Sapling"),
-		leaves = S("Giant Sequoia Leaves"),
-		trunk_stair = S("Giant Sequoia Trunk Stair"),
-		trunk_slab = S("Giant Sequoia Trunk Slab"),
-		planks_stair = S("Giant Sequoia Planks Stair"),
-		planks_slab = S("Giant Sequoia Planks Slab"),
-		fence = S("Giant Sequoia Fence"),
-		fence_rail = S("Giant Sequoia Fence Rail"),
-		fence_gate = S("Giant Sequoia Fence Gate"),
-	},
-	birch = {
-		trunk = S("Birch Tree Trunk"),
-		planks = S("Birch Tree Planks"),
-		sapling = S("Birch Tree Sapling"),
-		leaves = S("Birch Tree Leaves"),
-		trunk_stair = S("Birch Tree Trunk Stair"),
-		trunk_slab = S("Birch Tree Trunk Slab"),
-		planks_stair = S("Birch Tree Planks Stair"),
-		planks_slab = S("Birch Tree Planks Slab"),
-		fence = S("Birch Tree Fence"),
-		fence_rail = S("Birch Tree Fence Rail"),
-		fence_gate = S("Birch Tree Fence Gate"),
 	},
 	palm = {
 		trunk = S("Palm Tree Trunk"),
@@ -153,19 +115,6 @@ moretrees.treedesc = {
 	},
 	poplar_small = {
 		sapling = S("Small poplar Tree Sapling"),
-	},
-	willow = {
-		trunk = S("Willow Tree Trunk"),
-		planks = S("Willow Tree Planks"),
-		sapling = S("Willow Tree Sapling"),
-		leaves = S("Willow Tree Leaves"),
-		trunk_stair = S("Willow Tree Trunk Stair"),
-		trunk_slab = S("Willow Tree Trunk Slab"),
-		planks_stair = S("Willow Tree Planks Stair"),
-		planks_slab = S("Willow Tree Planks Slab"),
-		fence = S("Willow Tree Fence"),
-		fence_rail = S("Willow Tree Fence Rail"),
-		fence_gate = S("Willow Tree Fence Gate"),
 	},
 	rubber_tree = {
 		trunk = S("Rubber Tree Trunk"),
