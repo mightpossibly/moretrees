@@ -7,7 +7,7 @@ local S = minetest.get_translator("moretrees")
 local coconut_drop_ichance = 8
 
 -- Make the cocos palm fruit trunk a real trunk (it is generated as a fruit)
-local trunk = minetest.registered_nodes["ethereal:palm_trunk"]
+local trunk = minetest.registered_nodes["moretrees:palm_trunk"]
 local ftrunk = {}
 local gftrunk = {}
 for k,v in pairs(trunk) do
@@ -20,8 +20,8 @@ for k,v in pairs(trunk.tiles) do
 	ftrunk.tiles[k] = v
 	gftrunk.tiles[k] = v
 end
-ftrunk.drop = "ethereal:palm_trunk"
-gftrunk.drop = "ethereal:palm_trunk"
+ftrunk.drop = "moretrees:palm_trunk"
+gftrunk.drop = "moretrees:palm_trunk"
 ftrunk.after_destruct = function(pos, oldnode)
 	local coconuts = minetest.find_nodes_in_area(
 		{x=pos.x-1, y=pos.y, z=pos.z-1},
@@ -32,7 +32,7 @@ ftrunk.after_destruct = function(pos, oldnode)
 		-- minetest.dig_node(coconutpos) does not cause nearby coconuts to be dropped :-( ...
 		--minetest.dig_node(coconutpos)
 		local items = minetest.get_node_drops(minetest.get_node(coconutpos).name)
-		minetest.swap_node(coconutpos, {name = "air"})
+		minetest.swap_node(coconutpos, biome_lib.air)
 		for _, itemname in pairs(items) do
 			minetest.add_item(coconutpos, itemname)
 		end
@@ -82,8 +82,8 @@ minetest.register_abm({
 	nodenames = { "moretrees:palm_fruit_trunk_gen" },
 	interval = 6,
 	chance = 1,
-	min_y = -16,
-	max_y = 48,
+	min_y = biome_lib.mapgen_elevation_limit.min,
+	max_y = biome_lib.mapgen_elevation_limit.max,
 	label = "converts palm trunk to a regular fruit trunk, and spawns some coconuts",
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		minetest.swap_node(pos, {name="moretrees:palm_fruit_trunk"})
@@ -130,7 +130,7 @@ local coconut_growfn = function(pos, elapsed)
 					minetest.add_item(pos, itemname)
 				end
 			end
-			minetest.swap_node(pos, {name = "air"})
+			minetest.swap_node(pos, biome_lib.air)
 		end
 	else
 		-- Grow coconuts to the next stage

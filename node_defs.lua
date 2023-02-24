@@ -5,15 +5,7 @@ moretrees.avoidnodes = {}
 moretrees.treelist = {
 	{"apple_tree",   S("Apple Tree")},
 	{"oak",          S("Oak Tree"),       "acorn",                S("Acorn"), {-0.2, -0.5, -0.2, 0.2, 0, 0.2}, 0.8 },
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-	{"sequoia",      S("Giant Sequoia")},
-	{"birch",        S("Birch Tree")},
-=======
->>>>>>> Stashed changes
 	{"palm",         S("Palm Tree"),      "palm_fruit_trunk_gen", S("Palm Tree"), {-0.2, -0.5, -0.2, 0.2, 0, 0.2}, 1.0 },
-=======
->>>>>>> 11ad8bce4d8e59bd78fecc0ee6a9d86bb3273e1b
 	{"date_palm",    S("Date Palm Tree"), "date_palm_fruit_trunk",S("Date Palm Tree"), {0, 0, 0, 0, 0, 0}, 0.0 },
 	{"spruce",       S("Spruce Tree"),    "spruce_cone",          S("Spruce Cone"), {-0.2, -0.5, -0.2, 0.2, 0, 0.2}, 0.8 },
 	{"cedar",        S("Cedar Tree"),     "cedar_cone",           S("Cedar Cone"), {-0.2, -0.5, -0.2, 0.2, 0, 0.2}, 0.8 },
@@ -21,12 +13,13 @@ moretrees.treelist = {
 	{"poplar_small", S("Poplar Tree")},
 	{"rubber_tree",  S("Rubber Tree")},
 	{"fir",          S("Douglas Fir"),    "fir_cone",             S("Fir Cone"), {-0.2, -0.5, -0.2, 0.2, 0, 0.2}, 0.8 },
+	{"jungletree",   S("Jungle Tree"),     nil,                   nil, nil, nil, "default_junglesapling.png"  },
 }
 
 moretrees.treedesc = {
 	apple_tree = {
 		trunk = S("Apple Tree Trunk"),
-		planks = S("Apple Tree Wood"),
+		planks = S("Apple Tree Planks"),
 		sapling = S("Apple Tree Sapling"),
 		leaves = S("Apple Tree Leaves"),
 		trunk_stair = S("Apple Tree Trunk Stair"),
@@ -39,7 +32,7 @@ moretrees.treedesc = {
 	},
 	oak = {
 		trunk = S("Oak Tree Trunk"),
-		planks = S("Oak Wood"),
+		planks = S("Oak Tree Planks"),
 		sapling = S("Oak Tree Sapling"),
 		leaves = S("Oak Tree Leaves"),
 		trunk_stair = S("Oak Tree Trunk Stair"),
@@ -50,7 +43,6 @@ moretrees.treedesc = {
 		fence_rail = S("Oak Tree Fence Rail"),
 		fence_gate = S("Oak Tree Fence Gate"),
 	},
-<<<<<<< HEAD
 	palm = {
 		trunk = S("Palm Tree Trunk"),
 		planks = S("Palm Tree Planks"),
@@ -64,11 +56,9 @@ moretrees.treedesc = {
 		fence_rail = S("Palm Tree Fence Rail"),
 		fence_gate = S("Palm Tree Fence Gate"),
 	},
-=======
->>>>>>> 11ad8bce4d8e59bd78fecc0ee6a9d86bb3273e1b
 	date_palm = {
 		trunk = S("Date Palm Tree Trunk"),
-		planks = S("Date Palm Wood"),
+		planks = S("Date Palm Tree Planks"),
 		sapling = S("Date Palm Tree Sapling"),
 		leaves = S("Date Palm Tree Leaves"),
 		trunk_stair = S("Date Palm Tree Trunk Stair"),
@@ -81,7 +71,7 @@ moretrees.treedesc = {
 	},
 	spruce = {
 		trunk = S("Spruce Tree Trunk"),
-		planks = S("Spruce Wood"),
+		planks = S("Spruce Tree Planks"),
 		sapling = S("Spruce Tree Sapling"),
 		leaves = S("Spruce Tree Leaves"),
 		trunk_stair = S("Spruce Tree Trunk Stair"),
@@ -94,7 +84,7 @@ moretrees.treedesc = {
 	},
 	cedar =  {
 		trunk = S("Cedar Tree Trunk"),
-		planks = S("Cedar Wood"),
+		planks = S("Cedar Tree Planks"),
 		sapling = S("Cedar Tree Sapling"),
 		leaves = S("Cedar Tree Leaves"),
 		trunk_stair = S("Cedar Tree Trunk Stair"),
@@ -107,7 +97,7 @@ moretrees.treedesc = {
 	},
 	poplar = {
 		trunk = S("Poplar Tree Trunk"),
-		planks = S("Poplar Wood"),
+		planks = S("Poplar Tree Planks"),
 		sapling = S("Poplar Tree Sapling"),
 		leaves = S("Poplar Tree Leaves"),
 		trunk_stair = S("Poplar Tree Trunk Stair"),
@@ -123,7 +113,7 @@ moretrees.treedesc = {
 	},
 	rubber_tree = {
 		trunk = S("Rubber Tree Trunk"),
-		planks = S("Rubber Tree Wood"),
+		planks = S("Rubber Tree Planks"),
 		sapling = S("Rubber Tree Sapling"),
 		leaves = S("Rubber Tree Leaves"),
 		trunk_stair = S("Rubber Tree Trunk Stair"),
@@ -136,7 +126,7 @@ moretrees.treedesc = {
 	},
 	fir = {
 		trunk = S("Douglas Fir Trunk"),
-		planks = S("Douglas Fir Wood"),
+		planks = S("Douglas Fir Planks"),
 		sapling = S("Douglas Fir Sapling"),
 		leaves = S("Douglas Fir Leaves"),
 		trunk_stair = S("Douglas Fir Trunk Stair"),
@@ -146,6 +136,19 @@ moretrees.treedesc = {
 		fence = S("Douglas Fir Fence"),
 		fence_rail = S("Douglas Fir Fence Rail"),
 		fence_gate = S("Douglas Fir Fence Gate"),
+	},
+	jungletree = {
+		trunk = S("Jungle Tree Trunk"),
+		planks = S("Jungle Tree Planks"),
+		sapling = S("Jungle Tree Sapling"),
+		leaves = S("Jungle Tree Leaves"),
+		trunk_stair = S("Jungle Tree Trunk Stair"),
+		trunk_slab = S("Jungle Tree Trunk Slab"),
+		planks_stair = S("Jungle Tree Planks Stair"),
+		planks_slab = S("Jungle Tree Planks Slab"),
+		fence = S("Jungle Tree Fence"),
+		fence_rail = S("Jungle Tree Fence Rail"),
+		fence_gate = S("Jungle Tree Fence Gate"),
 	},
 }
 
@@ -569,7 +572,18 @@ for color = 1, #jungleleaves do
 	})
 end
 
+-- To get Moretrees to generate its own jungle trees among the default mapgen
+-- we need our own copy of that node, which moretrees will match against.
 
+local jungle_tree = table.copy(minetest.registered_nodes["default:jungletree"])
+jungle_tree.drop = "default:jungletree"
+minetest.register_node("moretrees:jungletree_trunk", jungle_tree)
+
+default.register_leafdecay({
+	trunks = { "default:jungletree", "moretrees:jungletree_trunk" },
+	leaves = { "default:jungleleaves", "moretrees:jungletree_leaves_yellow", "moretrees:jungletree_leaves_red" },
+	radius = moretrees.leafdecay_radius,
+})
 
 -- Extra needles for firs
 

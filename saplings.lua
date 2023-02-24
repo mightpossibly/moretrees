@@ -39,28 +39,7 @@ local sand_surfaces = {
 	-- too cold for a palm, too... well... sandy for anything else.
 }
 
-function moretrees.can_grow(pos, treename)
-	local surfaces
-
-	if treename == "spruce"
-	  or treename == "fir"
-	  or treename == "cedar"
-	  or treename == "pine" then
-		surfaces = conifer_surfaces
-	elseif string.find(treename, "palm") then
-		surfaces = sand_surfaces
-	else
-		surfaces = dirt_surfaces
-	end
-
-	if surfaces[minetest.get_node(vector.new(pos.x, pos.y-1, pos.z)).name] then
-		return true
-	else
-		return false
-	end
-end
-
---[[ for i in ipairs(moretrees.treelist) do
+for i in ipairs(moretrees.treelist) do
 	local treename = moretrees.treelist[i][1]
 	local tree_model = treename.."_model"
 	local tree_biome = treename.."_biome"
@@ -102,4 +81,4 @@ end
 		grow_nodes = surfaces,
 		grow_function = grow_function,
 	})
-end ]]
+end
