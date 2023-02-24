@@ -1,3 +1,9 @@
+IMPORTANT NOTICE: This is a fork by mightpossibly of the mod 'moretrees'. It is an altered version of the original code. The original authors have no affiliation with this repository, nor do they endorse it or its contents in any way.
+
+The original license applies to this fork as well:
+
+======================
+
 Minetest mod moretrees
 ======================
 
